@@ -1,0 +1,50 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+}
+
+.day-name {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #6b7280;
+    background-color: white;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 150ms;
+}
+
+.day:hover:not(.day--disabled) {
+    background-color: #f3f4f6;
+}
+
+.day--disabled {
+    color: #d1d5db;
+    cursor: not-allowed;
+}
+
+.day--selected {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.day--today {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
